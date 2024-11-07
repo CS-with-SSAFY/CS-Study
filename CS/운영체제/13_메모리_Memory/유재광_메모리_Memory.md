@@ -1,3 +1,16 @@
+```mermaid
+sequenceDiagram
+    participant CPU
+    participant Memory
+    participant Storage
+
+    Storage ->> Memory: 프로그램 데이터 로드
+    CPU ->> Memory: 필요한 데이터 요청
+    Memory ->> CPU: 데이터 전달
+    CPU ->> Memory: 연산 결과 저장
+    Memory ->> Storage: 최종 결과 저장
+```
+
 > 메인 메모리는 CPU가 직접 접근할 수 있는 기억 장치
 > 프로세스가 실행되려면 프로그램이 메모리에 올라와야함
 
@@ -6,6 +19,8 @@
 CPU는 레지스터가 지시하는대로 메모리에 접근하여 다음에 수행할 명령어를 가져옴
 - 명령어 수행 시 메모리에 필요한 데이터가 없으면 해당 데이터를 우선 가져와여함
 - 이 역할이 MMU임
+- 
+
 
 ### MMU(Memory Management Unit, 메모리 관리 장치)
 - 논리 주소를 물리주소로 변환
